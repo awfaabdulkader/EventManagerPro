@@ -1,0 +1,53 @@
+.charts-container {
+    display: flex;
+    flex-wrap: wrap; /* Prevents squeezing */
+    justify-content: space-around; /* Better spacing */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+
+canvas {
+    width: 400px !important; /* Enlarge canvas */
+    height: 300px !important;
+}
+
+/* Add to your CSS file */
+.mobile-expanded {
+    width: 240px !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-collapsed {
+    transform: translateX(-100%);
+}
+
+@media (min-width: 1024px) {
+    .mobile-collapsed {
+        transform: none;
+    }
+
+
+}
+/* In your CSS file */
+.sidebar-toggle-expanded {
+    position: relative;
+    left: 13rem; /* or use Tailwind's ml-20 class */
+    z-index: 60; /* Make sure it's above the sidebar */
+}
+
+@media (min-width: 1024px) {
+    .sidebar-toggle-expanded {
+        position: static;
+        left: auto;
+    }
+}
+@media (max-width: 400px) {
+    table th, table td {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
